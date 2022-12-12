@@ -3589,7 +3589,8 @@ GameObject:
   - component: {fileID: 706881910}
   - component: {fileID: 706881909}
   - component: {fileID: 706881908}
-  - component: {fileID: 706881907}
+  - component: {fileID: 706881912}
+  - component: {fileID: 706881911}
   m_Layer: 0
   m_Name: AlarmSystem
   m_TagString: Untagged
@@ -3597,18 +3598,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &706881907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706881906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d298fb9a330cea448f8cc46c919af08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &706881908
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3695,7 +3684,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3746,6 +3735,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &706881911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706881906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f7b5c033148cd4eb0b4c9ec5b4c3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &706881912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706881906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eddb8577c1e330468fa5cec72ca34cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyDetected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706881911}
+        m_TargetAssemblyTypeName: Siren, Assembly-CSharp
+        m_MethodName: SirenOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _enemyLeftProtectedZone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706881911}
+        m_TargetAssemblyTypeName: Siren, Assembly-CSharp
+        m_MethodName: SirenOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &707733528
 PrefabInstance:
   m_ObjectHideFlags: 0
